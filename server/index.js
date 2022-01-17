@@ -21,9 +21,9 @@ app.use("/api", router);
 app.use(errorHandler);
 
 // Проверка работы сервера
-// app.get("/", (req, res) => {
-//   res.status(200).json({ message: "WORKING!!!" });
-// });
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "WORKING!!!" });
+});
 
 const start = async () => {
   try {
