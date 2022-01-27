@@ -14,16 +14,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, "static")));
-app.use(fileupload({}));
+app.use(fileUpload({}));
 app.use("/api", router);
 
-// Обработка ошибок обязательно должна регистрироваться в самом конце
+// // Обработка ошибок обязательно должна регистрироваться в самом конце
 app.use(errorHandler);
 
-// Проверка работы сервера
-app.get("/", (req, res) => {
-  res.status(200).json({ message: "WORKING!!!" });
-});
+// // Проверка работы сервера
+// app.get("/", (req, res) => {
+//   res.status(200).json({ message: "WORKING!!!" });
+// });
 
 const start = async () => {
   try {
