@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Card, Container, Form, Button, Row } from "react-bootstrap";
-import { NavLink, useLocation } from "react-router-dom";
-import { LOGIN_ROUTE, REGISTRATION_ROUTE } from "../utils/consts";
+import { NavLink, useLocation, useHistory } from "react-router-dom";
+import { LOGIN_ROUTE, REGISTRATION_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import { login, registration } from "../http/userAPI";
+import { observer } from "mobx-react-lite";
+import { Context } from "../index";
+
 // Авторизация
 const Auth = () => {
   const location = useLocation();
