@@ -8,8 +8,8 @@ export default class DeviceStore {
     this._selectedType = {};
     this._selectedBrand = {};
     this._page = 1;
-    this._totalCount = 0;
-    this._limit = 3;
+    this._totalCount = 0; //Общее к-во товаров, которые доступны по данному запросу
+    this._limit = 3; //К-во товаров на одной странице
     makeAutoObservable(this);
   }
 
