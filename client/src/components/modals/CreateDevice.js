@@ -46,7 +46,7 @@ const CreateDevice = observer(({ show, onHide }) => {
     formData.append("name", name);
     formData.append("price", `${price}`);
     formData.append("img", file);
-    formData.append("brandId", device.selectedBrand.id);
+    // formData.append("brandId", device.selectedBrand.id);
     formData.append("typeId", device.selectedType.id);
     formData.append("info", JSON.stringify(info));
     createDevice(formData).then((data) => onHide());
@@ -76,7 +76,7 @@ const CreateDevice = observer(({ show, onHide }) => {
               ))}
             </Dropdown.Menu>
           </Dropdown>
-          <Dropdown className="mt-2 mb-2">
+          {/* <Dropdown className="mt-2 mb-2">
             <Dropdown.Toggle>
               {device.selectedBrand.name || "Выберите бренд"}
             </Dropdown.Toggle>
@@ -90,7 +90,7 @@ const CreateDevice = observer(({ show, onHide }) => {
                 </Dropdown.Item>
               ))}
             </Dropdown.Menu>
-          </Dropdown>
+          </Dropdown> */}
           <Form.Control
             value={name}
             onChange={(e) => setName(e.target.value)}
