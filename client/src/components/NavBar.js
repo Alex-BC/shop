@@ -1,21 +1,21 @@
 import React, { useContext } from "react";
 import { Context } from "../index";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+// import Nav from "react-bootstrap/Nav";
 import { NavLink } from "react-router-dom";
 import { ADMIN_ROUTE, LOGIN_ROUTE, SHOP_ROUTE } from "../utils/consts";
 import { Button, Container } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const NavBar = observer(() => {
-  const { user } = useContext(Context);
-  const navigate = useNavigate();
+  // const { user } = useContext(Context);
+  // const navigate = useNavigate();
 
-  const logOut = () => {
-    user.setUser({});
-    user.setIsAuth(false);
-  };
+  // const logOut = () => {
+  //   user.setUser({});
+  //   user.setIsAuth(false);
+  // };
 
   return (
     <Navbar bg="dark" variant="dark">
@@ -24,7 +24,8 @@ const NavBar = observer(() => {
           <h1>Chestore</h1>
         </NavLink>
 
-        {user.isAuth ? (
+        {/* Админ панель и регистрация */}
+        {/* {user.isAuth ? (
           <Nav className="ml-auto" style={{ color: "white" }}>
             <Button
               variant={"outline-light"}
@@ -49,7 +50,7 @@ const NavBar = observer(() => {
               Авторизация
             </Button>
           </Nav>
-        )}
+        )} */}
       </Container>
     </Navbar>
   );

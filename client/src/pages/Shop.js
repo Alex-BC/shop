@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import BrandBar from "../components/BrandBar";
+// import BrandBar from "../components/BrandBar";
 import DeviceList from "../components/DeviceList";
-import TypeBar from "../components/TypeBar";
+// import TypeBar from "../components/TypeBar";
 import { observer } from "mobx-react-lite";
 import { Context } from "../index";
 import { fetchBrands, fetchDevices, fetchTypes } from "../http/deviceAPI";
@@ -36,12 +36,12 @@ const Shop = observer(() => {
   return (
     <Container>
       <Row className="mt-2">
-        <Col md={3}>
+        {/* <Col md={3}>
           <TypeBar />
-        </Col>
+        </Col> */}
 
         <Col md={9}>
-          <BrandBar />
+          {/* <BrandBar /> */}
           <DeviceList />
           <Pages />
         </Col>
